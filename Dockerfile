@@ -27,7 +27,5 @@ ENV DEP unbound
 RUN set -ex \
     && apk --update --no-cache add $DEP \
     && rm -rf /var/cache/apk/* \
-    && ln -s /etc/unbound /srv/unbound
+    && ln -s /etc/unbound "$APP_DIR"
 WORKDIR $APP_DIR
-
-ENTRYPOINT ["/entrypoint.sh"]
