@@ -12,6 +12,12 @@ ENV SSL_PORT                    853
 ENV REMOTE_CONTROL_INTERFACE    127.0.0.1
 ENV REMOTE_CONTROL_PORT         8953
 ENV VERBOSITY                   1
+
+ENV CACHE_MIN_TTL               900
+ENV CACHE_MAX_TTL               172800
+ENV PREFETCH                    yes
+
+ENV DEFAULT_FORWARD_ADDRS       ""
 ENV FORWARDS                    ""
 
 EXPOSE $PORT/udp
