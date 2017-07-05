@@ -6,7 +6,7 @@ FROM alpine
 MAINTAINER Vincent.Gu <g@v-io.co>
 
 ENV APP_DIR                     /srv/unbound
-ENV INTERFACE                   127.0.0.1
+ENV INTERFACE                   0.0.0.0
 ENV PORT                        53
 ENV SSL_PORT                    853
 ENV REMOTE_CONTROL_INTERFACE    127.0.0.1

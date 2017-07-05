@@ -4,9 +4,7 @@
 cat >$APP_DIR/unbound.conf <<-EOF
 server:
   verbosity: $VERBOSITY
-  port: $PORT
-
-  interface: $INTERFACE
+  interface: ${INTERFACE}@${PORT}
   access-control: 127.0.0.0/8 allow
   access-control: 10.0.0.0/8 allow
   access-control: 172.16.0.0/12 allow
@@ -15,6 +13,8 @@ server:
   cache-min-ttl: ${CACHE_MIN_TTL}
   cache-max-ttl: ${CACHE_MAX_TTL}
   prefetch: ${PREFETCH}
+
+  do-not-query-localhost: no
 
 remote-control:
   control-enable: yes
