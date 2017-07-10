@@ -15,7 +15,9 @@ ENV VERBOSITY                   1
 
 ENV CACHE_MIN_TTL               900
 ENV CACHE_MAX_TTL               172800
-ENV PREFETCH                    yes
+ENV CACHE_MAX_NEGATIVE_TTL      0
+ENV INFRA_HOST_TTL              0
+ENV PREFETCH                    no
 
 ENV DEFAULT_FORWARD_ADDRS       ""
 ENV FORWARDS                    ""

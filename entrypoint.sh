@@ -12,6 +12,8 @@ server:
 
   cache-min-ttl: ${CACHE_MIN_TTL}
   cache-max-ttl: ${CACHE_MAX_TTL}
+  cache-max-negative-ttl: ${CACHE_MAX_NEGATIVE_TTL}
+  infra-host-ttl: ${INFRA_HOST_TTL}
   prefetch: ${PREFETCH}
 
   do-not-query-localhost: no
